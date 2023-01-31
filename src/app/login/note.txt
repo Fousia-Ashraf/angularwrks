@@ -32,7 +32,10 @@ ts-component
         
  1.2 view to component data sharing(.html --> .ts)
 
-        1.2.1-  event binding -first use a normal event in bracket (event)= "method()"
+        1.2.1- event binding -first use a normal event in bracket (event)= "method()"
+
         1.2.2- event bind using dollar $ event      (event)=method($event)= oru event nadkumbo namk oru data koodi access chyynda timel an $event binding
                use chyyunnath.
                (events=onclick,click,change,keyup,keyin,mouseover,mouseup)
+
+        1.2.3- event binding with template rendering variable =forthis we use #variable
