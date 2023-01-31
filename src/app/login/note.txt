@@ -1,0 +1,38 @@
+angular
+-------
+
+create project
+            -npm new projectname
+
+clear errors/warnings
+            -npm i --force
+
+project running-
+                ng serve --open
+
+//life cycle of angular component
+-------------------------------
+constructor-->ngOnInit --->other methods
+
+//Data storing/accessing/binding techniques in angular(data sharing  in componenets)
+----------------------------------------------------
+
+.html fileum .ts fileum thammilan sharing nadkunnath
+
+html-view ennan parayanath
+ts-component
+
+1.  oneway binding-happens only in one direction
+-------------------------------------------
+
+  1.1 component to view data sharing(.ts-->.html)
+        1.1.1-  string interpolation -forthis technique we use double curly brackets {{}}-
+                how to do it-go store data in tsfile then print it in {{}} in html file=<h2>{{data}}</h2>
+        1.1.2-  property binding  [property]="data" eg=placeholder
+        
+ 1.2 view to component data sharing(.html --> .ts)
+
+        1.2.1-  event binding -first use a normal event in bracket (event)= "method()"
+        1.2.2- event bind using dollar $ event      (event)=method($event)= oru event nadkumbo namk oru data koodi access chyynda timel an $event binding
+               use chyyunnath.
+               (events=onclick,click,change,keyup,keyin,mouseover,mouseup)
