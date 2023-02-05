@@ -1,0 +1,23 @@
+input::placeholder{
+    color:rgb(160, 159, 159) ;
+    
+    }
+    input{
+        background: transparent;
+        /* border-style: none; */
+        box-shadow: none;
+        color: white;
+        color: white;
+        border:1px solid #9b9090 ;
+    }
+    
+    input:focus{
+        background: transparent;
+        box-shadow: none;
+    }
+    .border-dark{
+    margin-top: 70px;
+    background-color:rgba(0, 0, 0, 0.479);
+    border-radius: 25px;
+    
+    }

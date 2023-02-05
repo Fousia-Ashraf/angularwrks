@@ -1,0 +1,54 @@
+<h1 class="text-white mt-2  ps-3">welcome {{user}}</h1>
+
+<div class="container w-50 text-center">
+    <div class="row  w-100 p-5   d-flex text-white text-center justify-content-center ms-5">
+    
+    <div class="col-md-6 border ml-3">
+        <form action="" >
+            <h1><strong>Deposit</strong></h1>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="acno"    name="acno3" ID="baccnt3" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="enter acno"  >
+        
+            </div>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="psw"   name="pswrd3" id="bpswd3" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Password">
+        
+            </div>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="amnt"    name="acno3" ID="baccnt3" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="enter amount"  >
+        
+            </div>
+            <div class="p-2 mb-2">
+                <button type="submit" (click)="Deposit()"  class="btn btn-outline-light">Deposit</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    <div class="col-md-6 border">
+        <form action="" >
+            <h1><strong>Withdraw</strong></h1>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="acno1"    name="acno4" ID="baccnt4" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="enter acno"  >
+        
+            </div>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="psw1"   name="pswrd4" id="bpswd4" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Password">
+        
+            </div>
+            <div class="p-2 mb-2">
+                <input [(ngModel)]="amnt1"    name="acno4" ID="baccnt4" style="color: black;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="enter amount"  >
+        
+            </div>
+            <div class="p-2 mb-2">
+                <button type="submit" (click)="withdraw()"  class="btn btn-outline-light">Withdraw</button>
+            </div>
+            
+        </form>
+      </div>
+    </div>
+
+</div>    
+
+
+

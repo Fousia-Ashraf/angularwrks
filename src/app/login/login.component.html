@@ -3,17 +3,20 @@
 
 <div class="container w-50 border border-dark  text-center p-3" style="background-color:rgba(0, 0, 0, 0.479);border-radius: 25px;">
 <h1 class="text-white text-center">Sign into your bank account</h1>
-<form action="">
+<form action="" (ngSubmit)="login()">
     <div class="p-2 mb-2">
-        <input #acno  name="acno" ID="baccnt" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" [placeholder]="pholder" >
+        <input [(ngModel)]="acno"   name="acno" ID="baccnt" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" [placeholder]="pholder" >
 
     </div>
     <div class="p-2 mb-2">
-        <input #psw  name="pswrd" id="bpswd" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Password">
+        <input [(ngModel)]="pass"  name="pswrd" id="bpswd" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Password">
 
     </div>
     <div class="p-2 mb-2">
-        <button type="button" (click)="login(acno,psw)" class="btn btn-outline-light">login</button>
+        <button type="submit"  class="btn btn-outline-light">login</button>
+    </div>
+    <div class="p-2 mb-2 text-white">
+      Not Regitered ? <a style="text-decoration: none;color: rgb(238, 226, 60);" class=""  routerLink="register">Register here</a>
     </div>
 </form>
 </div>

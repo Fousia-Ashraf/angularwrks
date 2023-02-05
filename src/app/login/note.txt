@@ -39,3 +39,46 @@ ts-component
                (events=onclick,click,change,keyup,keyin,mouseover,mouseup)
 
         1.2.3- event binding with template rendering variable =forthis we use #variable
+
+2.two way binding techniques
+---------------------------------
+
+   2.1  ngModel method-we use the operator [(ngModel)]="property",we use forms module library here=access chyyndadatakolla variables nerathe initialise chyth vekkanam.inputl name attribute mustaytm indavanm.
+
+
+
+
+pathset cheyyan=app-routing.module.ts use cheyyum
+nammal set chytha path veran-app.component.htmlil <router-outlet></router-outlet> pass chyth kodkanam.
+
+redirection in angular
+-----------------------
+
+forthis we use the class -router
+     extra class use cheyyumbol korch karyanghal srdhikkanam-first athinte modulene import chyynam
+
+//module-AppRoutingModule   
+Router-a class used to redirect
+methods-navigateByUrl//
+
+In angular instead of inheritance we use //--Dependency Injection--// for shareing data from one class to another
+Dependency Injection nammal chyyunath constructornte akathan-
+     for that first we need access specifiers(public/private)
+     if public=every files in folder can accesss
+     if private=only that class alone can access the data/mostused method
+  
+     second=we need reference:ClassName
+
+     //access specifier reference:ClassName//
+     then,
+     reference.method()        call cheyyuka
+
+in case link redirection we could use routerLink/href CAN ALSO BE USED
+
+
+Angular service
+----------------
+
+to store redentent datas and methods
+-all the componenets can access the datas and methods defined in  servicefile easily
+ creating service file-//--ng g s serviceName--//
