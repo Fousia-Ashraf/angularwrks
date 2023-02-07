@@ -1,17 +1,17 @@
 
 <div class="container w-50 border border-dark  text-center p-3" style="background-color:rgba(0, 0, 0, 0.479);border-radius: 25px;">
     <h1 class="text-white text-center">Create your bank account</h1>
-    <form action="">
+    <form [formGroup]="registerForm" action=""> <!--[]=prperties,()=event-->
         <div class="p-2 mb-2">
-            <input [(ngModel)]="usn"    name="user" ID="user1" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="UserName" >
+            <input formControlName="uname"   name="user" ID="user1" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="UserName" >
     
         </div>
         <div class="p-2 mb-2">
-            <input [(ngModel)]="acno"   name="acno2" ID="baccnt2" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Account NO" >
+            <input formControlName="acno"   name="acno2" ID="baccnt2" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Account NO" >
     
         </div>
         <div class="p-2 mb-2">
-            <input [(ngModel)]="psw"   name="pswrd2" id="bpswd2" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="text" placeholder="Enter Password">
+            <input formControlName="psw"    name="pswrd2" id="bpswd2" style="color: white;border:1px solid #9b9090 ;" class="form-control" type="password" placeholder="Enter Password">
     
         </div>
         <div class="p-2 mb-2">

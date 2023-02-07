@@ -82,3 +82,26 @@ Angular service
 to store redentent datas and methods
 -all the componenets can access the datas and methods defined in  servicefile easily
  creating service file-//--ng g s serviceName--//
+
+ Angular Directives-to manipulate DOM
+ ---------------------
+
+1.COMPONENT Directives-oro component create cheyyumbozhm nMMUDE DOM change varum.
+2.structural directives-to iterate or check the dom data
+     *ngFor-a structural directive for for-loop
+
+
+validation in angular
+--------------------------
+
+ form creation in angular is done by-
+1.template driven form-currentlty using,difficult to validate
+2.model driven form-easy to validate=
+          2.1.reactive form-used to create model of form,forthis we need an extra module
+            -ReactiveFormsModule
+            inside a reactive form we have group which is must,a array,control
+
+            -ReactiveFormsModule-module
+            -
+
+

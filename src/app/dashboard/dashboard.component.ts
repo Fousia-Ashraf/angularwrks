@@ -45,10 +45,9 @@ withdraw(){
   if(result) {
     alert(`your account has been debited with amount ${amnt},and the current balance is ${result}`)
   } 
-  else{
-    alert("incorrect acno or password")
-  }           
+         
 
 
 }
+
 }

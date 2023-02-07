@@ -7,13 +7,14 @@ export class DataService {
 
   constructor() { }
 currentUser:any
+currentAcno:any
 
   UserDetails:any={
-    1000:{acno:1000,username:"anu",password:"abc123",balance:0},
-    1001:{acno:1001,username:"fousi",password:"abc123",balance:0},
-    1002:{acno:1002,username:"shani",password:"abc123",balance:0},
-    1003:{acno:1003,username:"akku",password:"abc123",balance:0},
-    1004:{acno:1004,username:"sharfi",password:"abc123",balance:0}
+    1000:{acno:1000,username:"anu",password:"abc123",balance:0,transaction:[]},
+    1001:{acno:1001,username:"fousi",password:"abc123",balance:0,transaction:[]},
+    1002:{acno:1002,username:"shani",password:"abc123",balance:0,transaction:[]},
+    1003:{acno:1003,username:"akku",password:"abc123",balance:0,transaction:[]},
+    1004:{acno:1004,username:"sharfi",password:"abc123",balance:0,transaction:[]}
   
   
   }
@@ -36,8 +37,8 @@ login(acno:any,psw:any){
   if(acno in UserDetails){
     if(psw==UserDetails[acno]['password']){
      this.currentUser= UserDetails[acno]["username"]
-     console.log(this.currentUser);
-     
+    //  console.log(this.currentUser);
+     this.currentAcno=acno
 
       return true
     
@@ -66,6 +67,8 @@ if(acnum in UserDetails){
   if(password==UserDetails[acnum]["password"]){
  //update bALANCE
  UserDetails[acnum]["balance"]+=amnt
+ //transaction data store
+ UserDetails[acnum]['transaction'].push({Type:'CREDIT',Amount:amnt})
  //return current balanace
  return UserDetails[acnum]["balance"]
 
@@ -93,8 +96,15 @@ withdraw(acnum:any,password:any,amount:any){
   
     if(password==UserDetails[acnum]["password"]){
    //update bALANCE
-   if(amnt<UserDetails[acnum["balance"]]){
+   if(amnt=UserDetails[acnum["balance"]]){
     UserDetails[acnum]["balance"]-=amnt
+
+    //TRASACTION HISTORY
+
+    UserDetails[acnum]['transaction'].push({Type:'DEBIT',Amount:amnt})
+    console.log(UserDetails);
+    
+
    //return current balanace
    return UserDetails[acnum]["balance"]
 
@@ -117,7 +127,17 @@ withdraw(acnum:any,password:any,amount:any){
     return false
   }
   
-  
+
+
+  }
+  getTransaction(acno:any){
+    return this.UserDetails[acno]["transaction"]
+
+
+
+  }
   }
 
-}
+
+
+
